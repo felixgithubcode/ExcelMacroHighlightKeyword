@@ -1,0 +1,11 @@
+Sub SelectKeyword()
+Dim filterKey As Variant
+filterKey = InputBox("Enter the key to search in selected Range:")
+Dim selectedCells As Range, cell As Range
+Set selectedCells = Selection
+For Each cell In selectedCells
+If cell.Value = filterKey Then
+cell.Interior.ColorIndex = 6
+End If
+Next cell
+End Sub
